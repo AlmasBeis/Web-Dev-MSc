@@ -55,15 +55,14 @@ Postman
 ├── docs/            api.md, specs/site.md, plan.md
 ├── postman/         коллекция и environment
 ├── src/
-│   ├── server.js    запуск, graceful shutdown
-│   ├── app.js       Express, роуты, обработка ошибок
-│   ├── config.js    чтение env
-│   ├── db/          pool, миграции (migrate.js, migrations/*.sql), транзакции
-│   ├── routes/      HTTP-слой
-│   ├── services/    бизнес-правила, расчёт баланса и журнала
-│   ├── repositories/ SQL
-│   ├── validators/  проверка тел запросов
-│   ├── middleware/  обработка ошибок, 404
-│   └── utils/       работа с датами
-└── test/            юнит-тесты
+    ├── server.js    запуск, graceful shutdown
+    ├── app.js       Express, роуты, обработка ошибок
+    ├── config.js    чтение env
+    ├── db/          pool, миграции (migrate.js, migrations/*.sql), транзакции
+    ├── routes/      HTTP-слой
+    ├── services/    бизнес-правила, расчёт баланса и журнала
+    ├── repositories/ SQL
+    ├── validators/  проверка тел запросов
+    ├── middleware/  обработка ошибок, 404
+    └── utils/       работа с датами
 ```
