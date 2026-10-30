@@ -1,0 +1,800 @@
+{
+  "info": {
+    "_postman_id": "f3464284-a760-4475-949d-e91a7e4d51f2",
+    "name": "MyCompany API",
+    "description": "Без скриптов. Рассчитана на свежую БД (docker compose down -v && up): empId=E15, заявки 7–10. Запускать по порядку.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "59057607",
+    "_collection_link": "https://go.postman.co/collection/59057607-f3464284-a760-4475-949d-e91a7e4d51f2?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Offices",
+      "item": [
+        {
+          "name": "Создать",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"TST\",\n  \"city\": \"Шымкент\",\n  \"address\": \"ул. Байтурсынова, 1\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/offices",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "offices"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Список",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/offices",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "offices"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Получить",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/offices/TST",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "offices",
+                "TST"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Обновить",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"city\": \"Шымкент\",\n  \"address\": \"ул. Тауке хана, 10\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/offices/TST",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "offices",
+                "TST"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Удалить",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/offices/TST",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "offices",
+                "TST"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Departments",
+      "item": [
+        {
+          "name": "Создать",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"tmp\",\n  \"name\": \"Тестовый отдел\",\n  \"parentId\": \"dev\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/departments",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "departments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Список",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/departments",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "departments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Получить",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/departments/tmp",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "departments",
+                "tmp"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Обновить",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Переименованный отдел\",\n  \"parentId\": null\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/departments/tmp",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "departments",
+                "tmp"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Удалить",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/departments/tmp",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "departments",
+                "tmp"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Employees",
+      "item": [
+        {
+          "name": "Создать",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"firstName\": \"Постман\",\n  \"lastName\": \"Тестов\",\n  \"middleName\": null,\n  \"position\": \"QA-инженер\",\n  \"departmentId\": \"mobile\",\n  \"officeId\": \"ALA\",\n  \"managerId\": \"E03\",\n  \"email\": \"postman@alfasoft.kz\",\n  \"phone\": \"+7 727 355 01 99\",\n  \"hireDate\": \"2025-01-01\",\n  \"carryOverDays\": 20,\n  \"languages\": [\n    {\n      \"language\": \"Русский\",\n      \"level\": \"родной\"\n    },\n    {\n      \"language\": \"Английский\",\n      \"level\": \"B1\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/employees",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "employees"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Список (фильтр)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/employees?departmentId=dev&limit=5",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "employees"
+              ],
+              "query": [
+                {
+                  "key": "departmentId",
+                  "value": "dev"
+                },
+                {
+                  "key": "limit",
+                  "value": "5"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Получить",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/employees/{{empId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "employees",
+                "{{empId}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Обновить",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"firstName\": \"Постман\",\n  \"lastName\": \"Тестов\",\n  \"middleName\": null,\n  \"position\": \"Senior QA\",\n  \"departmentId\": \"mobile\",\n  \"officeId\": \"ALA\",\n  \"managerId\": \"E03\",\n  \"email\": \"postman@alfasoft.kz\",\n  \"phone\": \"+7 727 355 01 99\",\n  \"hireDate\": \"2025-01-01\",\n  \"carryOverDays\": 20,\n  \"languages\": [\n    {\n      \"language\": \"Казахский\",\n      \"level\": \"базовый\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/employees/{{empId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "employees",
+                "{{empId}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Удалить сотрудника",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/employees/{{empId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "employees",
+                "{{empId}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Leave balance",
+      "item": [
+        {
+          "name": "Баланс",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/employees/{{empId}}/leave-balance",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "employees",
+                "{{empId}}",
+                "leave-balance"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Журнал",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/employees/{{empId}}/leave-ledger",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "employees",
+                "{{empId}}",
+                "leave-ledger"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Leave requests",
+      "item": [
+        {
+          "name": "Создать",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"employeeId\": \"{{empId}}\",\n  \"type\": \"ANNUAL\",\n  \"startDate\": \"2027-03-01\",\n  \"endDate\": \"2027-03-05\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/leave-requests",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "leave-requests"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Список",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/leave-requests?employeeId={{empId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "leave-requests"
+              ],
+              "query": [
+                {
+                  "key": "employeeId",
+                  "value": "{{empId}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Получить",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/leave-requests/{{reqA}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "leave-requests",
+                "{{reqA}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Обновить",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"type\": \"ANNUAL\",\n  \"startDate\": \"2027-03-01\",\n  \"endDate\": \"2027-03-05\",\n  \"comment\": \"Обновлено\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/leave-requests/{{reqA}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "leave-requests",
+                "{{reqA}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Согласовать",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"comment\": \"Хорошего отдыха\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/leave-requests/{{reqA}}/approve",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "leave-requests",
+                "{{reqA}}",
+                "approve"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Создать (для отклонения)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"employeeId\": \"{{empId}}\",\n  \"type\": \"ANNUAL\",\n  \"startDate\": \"2027-04-01\",\n  \"endDate\": \"2027-04-02\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/leave-requests",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "leave-requests"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Отклонить",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"reason\": \"Релиз, перенеси\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/leave-requests/{{reqB}}/reject",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "leave-requests",
+                "{{reqB}}",
+                "reject"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Создать (для отзыва)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"employeeId\": \"{{empId}}\",\n  \"type\": \"ANNUAL\",\n  \"startDate\": \"2027-05-03\",\n  \"endDate\": \"2027-05-04\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/leave-requests",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "leave-requests"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Отозвать",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/leave-requests/{{reqC}}/cancel",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "leave-requests",
+                "{{reqC}}",
+                "cancel"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Создать (для удаления)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"employeeId\": \"{{empId}}\",\n  \"type\": \"ANNUAL\",\n  \"startDate\": \"2027-06-01\",\n  \"endDate\": \"2027-06-02\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/leave-requests",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "leave-requests"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Удалить",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/leave-requests/{{reqD}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "leave-requests",
+                "{{reqD}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/health",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "health"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "empId",
+      "value": "E15"
+    },
+    {
+      "key": "reqA",
+      "value": "7"
+    },
+    {
+      "key": "reqB",
+      "value": "8"
+    },
+    {
+      "key": "reqC",
+      "value": "9"
+    },
+    {
+      "key": "reqD",
+      "value": "10"
+    }
+  ]
+}
